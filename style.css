@@ -1,0 +1,167 @@
+/* General Styles */
+:root {
+    --primary-red: #d32f2f;
+    --gold: #ffc107;
+    --dark-bg: #1a1a1a;
+    --light-bg: #ffffff;
+    --border-color: #ddd;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                url('https://images.unsplash.com/photo-1512152272829-e3139592d56f?auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--gold);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--gold);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.eng-title {
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 5px 0;
+}
+
+.tagline {
+    font-style: italic;
+    color: #ccc;
+}
+
+/* Menu Section */
+#full-menu, #order-calculator {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border: 1px solid var(--border-color);
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary-red);
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+/* Category Folders (Details/Summary) */
+details {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+summary {
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* Distinct Colors for Categories */
+details:nth-child(1) summary { background-color: #2e7d32; } /* Green for Chowmin */
+details:nth-child(2) summary { background-color: #ef6c00; } /* Orange for Manchurian */
+details:nth-child(3) summary { background-color: #c62828; } /* Red for Pizza */
+details:nth-child(4) summary { background-color: #6a1b9a; } /* Purple for Burger */
+
+summary i { margin-right: 10px; }
+
+.menu-list {
+    background: #fff9f0;
+    padding: 10px 15px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.item:last-child { border-bottom: none; }
+
+/* Calculator & Buttons */
+.input-group {
+    margin: 15px 0;
+}
+
+select, input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+.calc-btn {
+    background-color: var(--dark-bg);
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#result-area {
+    text-align: center;
+    background: #fdf2f2;
+    padding: 10px;
+    margin-top: 15px;
+    border: 2px dashed var(--primary-red);
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: var(--dark-bg);
+    color: white;
+    margin-top: 40px;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naman Chowmin Center | Indian Street Food</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <h1>नमन चाऊमीन सेन्टर</h1>
+            <p class="eng-title">NAMAN CHOWMIN CENTER</p>
+            <span class="tagline">"The Taste of Indian Street Food"</span>
+        </div>
+    </header>
+
+    <section id="full-menu">
+        <h2>Explore Our Menu</h2>
+        <p class="instruction">Click a category to see varieties</p>
+        
+        <div class="menu-tabs">
+            <details>
+                <summary><i class="fas fa-utensils"></i> Chowmin & Noodles</summary>
+                <div class="menu-list">
+                    <div class="item"><span>Veg Chowmin (Half/Full)</span> <span>₹30 / ₹50</span></div>
+                    <div class="item"><span>Hakka Noodles</span> <span>₹60</span></div>
+                    <div class="item"><span>Schezwan Chowmin</span> <span>₹70</span></div>
+                    <div class="item"><span>Paneer Chowmin</span> <span>₹80</span></div>
+                </div>
+            </details>
+
+            <details>
+                <summary><i class="fas fa-bowl-food"></i> Manchurian</summary>
+                <div class="menu-list">
+                    <div class="item"><span>Veg Manchurian (Dry/Gravy)</span> <span>₹40 / ₹70</span></div>
+                    <div class="item"><span>Paneer Manchurian</span> <span>₹100</span></div>
+                    <div class="item"><span>Gobi Manchurian</span> <span>₹60</span></div>
+                </div>
+            </details>
+
+            <details>
+                <summary><i class="fas fa-pizza-slice"></i> Pizza</summary>
+                <div class="menu-list">
+                    <div class="item"><span>Classic Cheese Pizza</span> <span>₹150</span></div>
+                    <div class="item"><span>Golden Corn Pizza</span> <span>₹120</span></div>
+                    <div class="item"><span>Paneer Tikka Pizza</span> <span>₹180</span></div>
+                    <div class="item"><span>Onion & Capsicum Pizza</span> <span>₹100</span></div>
+                </div>
+            </details>
+
+            <details>
+                <summary><i class="fas fa-hamburger"></i> Burgers & Snacks</summary>
+                <div class="menu-list">
+                    <div class="item"><span>Aloo Tikki Burger</span> <span>₹70</span></div>
+                    <div class="item"><span>Cheese Lava Burger</span> <span>₹90</span></div>
+                    <div class="item"><span>Veg Grilled Sandwich</span> <span>₹70</span></div>
+                    <div class="item"><span>Paneer Club Sandwich</span> <span>₹110</span></div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section id="order-calculator">
+        <h2>Quick Bill Calculator</h2>
+        <div class="calc-container">
+            <div class="input-group">
+                <label for="food-select">Select Item:</label>
+                <select id="food-select">
+                    <option value="0" data-name="None">-- Select Food --</option>
+                    <option value="150" data-name="Cheese Pizza">Cheese Pizza - ₹150</option>
+                    <option value="120" data-name="Corn Pizza">Corn Pizza - ₹120</option>
+                    <option value="70" data-name="Manchurian Full">Manchurian (Full) - ₹70</option>
+                    <option value="40" data-name="Manchurian Half">Manchurian (Half) - ₹40</option>
+                    <option value="50" data-name="Chowmin Full">Chowmin (Full) - ₹50</option>
+                    <option value="30" data-name="Chowmin Half">Chowmin (Half) - ₹30</option>
+                    <option value="70" data-name="Burger">Burger - ₹70</option>
+                    <option value="70" data-name="Sandwich">Sandwich - ₹70</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" min="1" value="1">
+            </div>
+
+            <button class="calc-btn" onclick="calculateTotal()">Calculate Bill</button>
+            
+            <div id="result-area">
+                <h3>Total: ₹<span id="total-price">0</span></h3>
+            </div>
+
+            <button class="whatsapp-btn" onclick="placeOrder()">
+                <i class="fab fa-whatsapp"></i> Order via WhatsApp
+            </button>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>नमन चाऊमीन सेन्टर</strong></p>
+        <p>स्वादिष्ट, ताज़ा और लाजवाब!</p>
+        <p><i class="fas fa-phone"></i> +91 62613 71002</p>
+        <hr>
+        <p class="copyright">© 2024 | Jai Maa Sharda</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
